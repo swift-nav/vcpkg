@@ -2,12 +2,10 @@ vcpkg_check_linkage(ONLY_STATIC_LIBRARY)
 
 vcpkg_from_github(
     OUT_SOURCE_PATH SOURCE_PATH
-    REPO nanopb/nanopb
-    REF 0.4.5
-    SHA512 2f24308440bd961a94449e253627fbe38f6c5217cd70c57e9b3ab702da3c2df03b087ccdd62518940acf6b480a1dbb440ca5681f1766a17b199010d3df7b17a1
-    HEAD_REF master
-    PATCHES 
-        fix-python.patch
+    REPO swift-nav/nanopb
+    REF 4161d73ba0c3ecd10170ac0d3e9a34cbb88a8061
+    SHA512 3ffb5b0223f4b875da44e61e4c2d13751d1f94bc28dd24913cdbac450fd4d04cb2a7a972d26170552977a02173daaaab56abf2e78a8509da8a83aba4c0386eda
+    HEAD_REF cmake-fix
 )
 
 string(COMPARE EQUAL "${VCPKG_LIBRARY_LINKAGE}" "static" nanopb_BUILD_STATIC_LIBS)
